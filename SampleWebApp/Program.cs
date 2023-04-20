@@ -12,7 +12,7 @@ var app = builder.Build();
 app.Use(async (context, next) =>
 {
     var path = context.Request.Path;
-    if (path =="/")
+    if (path == "/")
     {
         context.Request.Path = "/Swagger";
     }
@@ -20,11 +20,8 @@ app.Use(async (context, next) =>
 });
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
