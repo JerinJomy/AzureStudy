@@ -21,6 +21,9 @@ public class SampleController : ControllerBase
     [HttpGet(Name = "Value")]
     public IEnumerable<WeatherForecast> Get()
     {
+        _logger.LogInformation("Request to sample endpoint");
+        _logger.LogInformation("Started processing a request");
+        _logger.LogInformation("Completed");
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateTime.Now.AddDays(index),
