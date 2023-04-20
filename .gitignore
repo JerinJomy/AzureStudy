@@ -1,0 +1,5 @@
+[Bb]in/
+[Oo]bj/
+launchSettings.json
+.vs/SampleWebApp/xs/UserPrefs.xml
+.DS_Store
