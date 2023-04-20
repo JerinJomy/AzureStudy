@@ -32,5 +32,12 @@ public class SampleController : ControllerBase
         })
         .ToArray();
     }
+
+    [HttpGet]
+    [Route("test")]
+    public string GetData()
+    {
+        return "Test";
+    }
 }
 
